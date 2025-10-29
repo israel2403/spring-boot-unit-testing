@@ -6,7 +6,7 @@ public class DemoUtils {
 
     private String academy = "Luv2Code Academy";
     private String academyDuplicate = academy;
-    private String[] firstThreeLettersOfAlphabet = {"A", "B", "C"};
+    private String[] firstThreeLettersOfAlphabet = { "A", "B", "C" };
     private List<String> academyInList = List.of("luv", "2", "code");
 
     public List<String> getAcademyInList() {
@@ -26,7 +26,7 @@ public class DemoUtils {
     }
 
     public int add(int a, int b) {
-        return a + b;
+        return a + b + b;
     }
 
     public int multiply(int a, int b) {
