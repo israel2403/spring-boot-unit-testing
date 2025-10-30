@@ -26,7 +26,7 @@ public class DemoUtils {
     }
 
     public int add(int a, int b) {
-        return a + b + b;
+        return a + b;
     }
 
     public int multiply(int a, int b) {
@@ -34,9 +34,11 @@ public class DemoUtils {
     }
 
     public Object checkNull(Object obj) {
+
         if (obj != null) {
             return obj;
         }
+
         return null;
     }
 
