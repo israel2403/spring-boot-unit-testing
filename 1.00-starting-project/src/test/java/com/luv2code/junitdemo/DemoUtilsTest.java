@@ -6,9 +6,11 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.DisplayNameGeneration;
+import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Test;
 
+@DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
 class DemoUtilsTest {
 
   DemoUtils demoUtils;
@@ -38,8 +40,7 @@ class DemoUtilsTest {
   }
 
   @Test
-  @DisplayName("Test equals and not equals")
-  void testEqualsAndNotEquals() {
+  void test_equals_and_not_equals() {
     System.out.println("Running test: testEqualsAndNotEquals");
 
     assertEquals(6, demoUtils.add(2, 4), "2+4 must be 6");
@@ -47,8 +48,7 @@ class DemoUtilsTest {
   }
 
   @Test
-  @DisplayName("Test null and not null")
-  void testNullAndNotNull() {
+  void test_null_and_not_null() {
     System.out.println("Running test: testNullAndNotNull");
 
     String str1 = null;
