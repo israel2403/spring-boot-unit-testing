@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
-@TestMethodOrder(MethodOrderer.MethodName.class)
+@TestMethodOrder(MethodOrderer.DisplayName.class)
 class DemoUtilsTest {
 
   DemoUtils demoUtils;
