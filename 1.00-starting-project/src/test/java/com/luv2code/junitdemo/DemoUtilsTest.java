@@ -12,12 +12,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@TestMethodOrder(MethodOrderer.MethodName.class)
 class DemoUtilsTest {
 
   DemoUtils demoUtils;
@@ -47,7 +46,6 @@ class DemoUtilsTest {
   }
 
   @Test
-  @Order(1)
   void test_equals_and_not_equals() {
     System.out.println("Running test: testEqualsAndNotEquals");
 
@@ -56,7 +54,6 @@ class DemoUtilsTest {
   }
 
   @Test
-  @Order(0)
   void test_null_and_not_null() {
     System.out.println("Running test: testNullAndNotNull");
 
@@ -134,5 +131,17 @@ class DemoUtilsTest {
     assertTimeoutPreemptively(Duration.ofSeconds(3), () -> {
       demoUtils.checkTimeout();
     }, "Method should execute in 3 secs");
+  }
+
+  @Test
+  void test_multiply() {
+    // Arrange
+    int expected = 10;
+
+    // Act
+    int actual = demoUtils.multiply(2, 5);
+
+    // Assert
+    assertEquals(expected, actual, "Multiplication should be correct");
   }
 }
